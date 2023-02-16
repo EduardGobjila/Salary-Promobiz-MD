@@ -1,1 +1,22 @@
 // Specific CSS for your home-page
+
+.container-for-home {
+  text-align: center;
+  padding-top: 40px;
+}
+.button-see-salary {
+  width: 100px;
+  color: white;
+  background-color: orange;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 5px 5px 10px;
+  margin-top: 20px;
+}
+.button-see-salary:hover {
+  color: rgb(106, 25, 25);
+  box-shadow: 1px 1px 10px orange;
+  transition: 0.4s;
+  transform: scale(0.8);
+}
