@@ -4,3 +4,16 @@
   text-align: center;
   padding-top: 40px;
 }
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.chart-1 {
+  margin: 20px;
+  width: 350px;
+}
+.chart-2 {
+  margin: 20px;
+  width: 350px;
+}
