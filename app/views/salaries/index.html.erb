@@ -5,8 +5,13 @@
 
     <h4>Here is your income summary for <%= Date.current.year %></h4>
 
+    <% @salaries.each do |s| %>
+    <%= s.salary %>
+     <%= s.month %>
+     <%= s.bonus %>
+    <% end %>
 
-
+    <%= line_chart Salary.group_by_month(:created_at, format: "%b %Y").count %>
   <% else %>
     <h1>Please Sign In/Sign Up to see your income</h1>
     <%= link_to "Sign In", user_session_path %>

@@ -1,38 +1,26 @@
+# require 'fusioncharts-rails'
 class SalariesController < ApplicationController
 
   def index
     @salaries = Salary.all
-
-    @chart = Fusioncharts::Chart.new({
-      :height => 400,
-      :width => 600,
-      :id => 'chart',
-      :type => 'MSColumn2D',
-      :renderAt => 'chart-container',
-      :dataSource => {
-          "chart": {
-              "caption": "Salary",
-              "subCaption": "In EUR (1) ~ 21 LEI MDL",
-              "xAxisName": "Salary",
-              "yAxisName": "Lei (MDL)",
-              "numberSuffix": "K",
-              "theme": "fusion",
-          },
-          "data": [{
-
-          }]
   end
 
   def show
-
+    @salary = Salary.find(params[:id])
   end
 
   def new
-
+    @salary = Salary.new
   end
 
   def create
-
+    @salary = Salary.new(salary_params)
+    @salary.user = current_user
+    if @salary.save
+      redirect_to salaries_path
+    else
+      render :new, stauts: :unprocessable_entity
+    end
   end
 
   def edit
@@ -45,5 +33,12 @@ class SalariesController < ApplicationController
 
   def destroy
 
+  end
+
+
+  private
+
+  def salary_params
+    params.require(:salaries).permit(:salary, :bonus, :month)
   end
 end
