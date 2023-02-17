@@ -4,7 +4,7 @@
     data: {turbo: false}) do |f| %>
     <div class="form-inputs">
       <%= f.input :email,
-                  required: false,
+                  required: true,
                   autofocus: true,
                   input_html: { autocomplete: "email" } %>
       <%= f.input :password,
@@ -14,8 +14,10 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Log in" %>
+      <%= f.button :submit, "Log in", class: 'log-in-btn' %>
     </div>
   <% end %>
-  <%= render "devise/shared/links" %>
+  <div class="other-buttons">
+    <%= render "devise/shared/links" %>
+  </div>
 </div>

@@ -1,9 +1,64 @@
 .container {
   width: 100%;
   text-align: center;
-
+  margin-top: 20px;
 }
 .form-inputs {
-  width: 50% !important;
+  width: 80% !important;
   margin: 50px auto;
+}
+.form-actions {
+  margin-bottom: 10px;
+}
+.log-in-btn {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 15px;
+}
+.log-in-btn:hover {
+  box-shadow: 2px 2px 10px black;
+  background-color: orange;
+}
+.other-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 5px;
+}
+.sign-up,
+.forgot-password {
+  margin: 10px;
+}
+.sign-up {
+  width: 50% !important;
+  background-color: rgb(184, 184, 78);
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+}
+.forgot-password {
+  background-color: olivedrab;
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  width: 50% !important;
+}
+#log-in {
+  background-color: rgb(97, 129, 33);
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+  width: 50% !important;
+}
+
+@media screen and (min-width: 800px) {
+  .form-inputs {
+    width: 50% !important;
+  }
+  .sign-up, .forgot-password {
+    width: 30% !important;
+  }
 }

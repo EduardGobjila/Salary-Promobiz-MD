@@ -6,7 +6,7 @@
 
               <h4>Here is your income summary for <%= Date.current.year %></h4>
               <%= link_to "Add Salary", new_salary_path, id: "salary-button" %>
-          <% if current_user.id == %>
+          <%# <% if current_user.id == %>
           <div class="charts">
             <div class="chart-1">
             <h3>Monthly Salary</h3>
@@ -23,7 +23,7 @@
                                         xtitle: "Months", ytitle: "Lei MDL"  %>
             </div>
           </div>
-          <% end %>
+          <%# <% end %>
     <% else %>
       <h1>Please Sign In/Sign Up to see your income</h1>
       <%= link_to "Sign In", user_session_path %>
