@@ -5,6 +5,11 @@ require "rails/test_help"
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
+   if @salaries.each {|s| s.user_id == current_user.id}
+    puts true
+   else
+     puts false
+   end
 
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
