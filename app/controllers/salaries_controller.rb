@@ -3,6 +3,10 @@ class SalariesController < ApplicationController
 
   def index
     @salaries = Salary.all
+
+    @salaries.each do |s|
+      @user = current_user.id == s.user_id
+    end
   end
 
   def show
