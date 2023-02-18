@@ -1,95 +1,150 @@
 .container {
   width: 100%;
+  height: 73vh;
   text-align: center;
   margin-top: 20px;
-}
-.form-inputs {
-  width: 80% !important;
-  margin: 50px auto;
-}
-.form-actions {
-  margin-bottom: 10px;
-}
-.log-in-btn {
-  background-color: orange;
-  padding: 10px;
-  color: white;
-  border-radius: 15px;
-}
-.log-in-btn:hover {
-  box-shadow: 2px 2px 4px rgb(174, 125, 34);
-  background-color: orange;
-  color: wheat;
-}
-.other-buttons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-top: 5px;
+  align-items: center;
 }
-.sign-up,
-.forgot-password {
-  margin: 10px;
+.form-container {
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 3px 3px 9px rgb(166, 166, 166);
+  width: 400px;
+  margin-bottom: 50px;
+  margin-right: 50px
+}
+.form-check {
+  text-align: start;
+}
+.logo-container {
+  width: 50%;
+  margin: 20px;
+}
+#logo-promo {
+  width: 300px;
+  object-fit: contain;
+}
+.form-actions {
+  margin-bottom: 10px;
+  background-color: #90328f;
+  border-radius: 5px;
+}
+.form-actions > input {
+  color: white !important;
+  width: 90%;
+}
+.form-control {
+  width: 300px !important;
+  border-radius: 5px;
+  padding: 14px;
+  margin: 0 auto;
+}
+.line {
+  border-radius: 4px;
+  border: 1px solid gray;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+.shared-sign-up {
+  width: 200px;
+  border-radius: 5px;
+  background-color: yellowgreen !important;
+  margin: 0 auto;
+  padding: 10px;
+  margin-bottom: 8px;
 }
 .sign-up {
-  width: 50% !important;
-  background-color: rgb(184, 184, 78);
-  padding: 10px;
-  border-radius: 15px;
-  text-decoration: none;
   color: white;
-}
-.sign-up:hover {
-  background-color: rgb(184, 184, 78);
-  box-shadow: 1px 1px 6px rgb(104, 104, 51);
-  color: wheat;
+  text-decoration: none;
 }
 .forgot-password {
-  background-color: rgb(107, 142, 35);
-  padding: 10px;
-  border-radius: 15px;
   text-decoration: none;
-  color: white;
-  width: 50% !important;
+  color: black;
 }
-.forgot-password:hover {
-  color: wheat;
-  box-shadow: 1px 1px 6px rgb(110, 133, 65);
-}
-#log-in {
-  background-color: rgb(97, 129, 33);
-  padding: 10px;
-  border-radius: 15px;
-  text-decoration: none;
-  color: white;
-  width: 50% !important;
-}
-#log-in:hover {
-  background-color: rgb(97, 129, 33);
-  color: white;
-  box-shadow: 1px 1px 6px rgb(94, 118, 46);
-}
-.forgot-btn {
-  background-color: orange;
-  padding: 10px;
-  border-radius: 15px;
-  text-decoration: none;
-  color: white;
-}
-.forgot-btn:hover {
-  box-shadow: 1px 1px 6px rgb(152, 117, 50);
-  background-color: orange;
-  color: wheat;
-}
-.shared-btn {
-  margin: 18px;
-}
+// .log-in-btn {
+//   background-color: orange;
+//   padding: 10px;
+//   color: white;
+//   border-radius: 15px;
+// }
+// .log-in-btn:hover {
+//   box-shadow: 2px 2px 4px rgb(174, 125, 34);
+//   background-color: orange;
+//   color: wheat;
+// }
+// .other-buttons {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+//   margin-top: 5px;
+// }
+// .sign-up,
+// .forgot-password {
+//   margin: 10px;
+// }
+// .sign-up {
+//   width: 50% !important;
+//   background-color: rgb(184, 184, 78);
+//   padding: 10px;
+//   border-radius: 15px;
+//   text-decoration: none;
+//   color: white;
+// }
+// .sign-up:hover {
+//   background-color: rgb(184, 184, 78);
+//   box-shadow: 1px 1px 6px rgb(104, 104, 51);
+//   color: wheat;
+// }
+// .forgot-password {
+//   background-color: rgb(107, 142, 35);
+//   padding: 10px;
+//   border-radius: 15px;
+//   text-decoration: none;
+//   color: white;
+//   width: 50% !important;
+// }
+// .forgot-password:hover {
+//   color: wheat;
+//   box-shadow: 1px 1px 6px rgb(110, 133, 65);
+// }
+// #log-in {
+//   background-color: rgb(97, 129, 33);
+//   padding: 10px;
+//   border-radius: 15px;
+//   text-decoration: none;
+//   color: white;
+//   width: 50% !important;
+// }
+// #log-in:hover {
+//   background-color: rgb(97, 129, 33);
+//   color: white;
+//   box-shadow: 1px 1px 6px rgb(94, 118, 46);
+// }
+// .forgot-btn {
+//   background-color: orange;
+//   padding: 10px;
+//   border-radius: 15px;
+//   text-decoration: none;
+//   color: white;
+// }
+// .forgot-btn:hover {
+//   box-shadow: 1px 1px 6px rgb(152, 117, 50);
+//   background-color: orange;
+//   color: wheat;
+// }
+// .shared-btn {
+//   margin: 18px;
+// }
 
 @media screen and (min-width: 800px) {
-  .form-inputs {
-    width: 50% !important;
-  }
-  .sign-up, .forgot-password {
-    width: 30% !important;
-  }
+  // .form-inputs {
+  //   width: 30% !important;
+  // }
+  // .sign-up, .forgot-password {
+  //   width: 30% !important;
+  // }
 }
