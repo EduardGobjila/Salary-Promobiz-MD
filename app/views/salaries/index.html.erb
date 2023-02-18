@@ -1,26 +1,31 @@
 
-<div class="container-for-index">
-  <% if user_signed_in? %>
-        <%# <% raise %>
-      <h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1>
-
-      <h4>Here is your income summary for <%= Date.current.year %></h4>
-      <div class="add-sallary-container">
-        <%= link_to "Add Salary", new_salary_path, id: "salary-button" %>
-      </div>
-      <div class="charts">
-      <div class="chart-1">
-      <h3>Monthly Salary</h3>
-          <%= column_chart(@monthly_salary) %>
-      </div>
-      <div class="chart-2">
-        <h3>Bonus</h3>
-          <%= column_chart(@monthly_bonus)  %>
-      </div>
+<% if user_signed_in? %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn2.editmysite.com/images/editor/theme-background/stock/Mountain-Backpacking.jpg);">
+    <div class="container">
+      <h1>Bun Venit <br> <strong><%= current_user.first_name  %></strong> <strong><%= current_user.last_name  %></strong></h1>
+      <p>Aici poti analiza salariul si bonusul primit in perioada curents (<%= Date.current.year %>)</p>
     </div>
+  </div>
+  <div class="container-for-index">
+        <div class="add-sallary-container">
+          <%= link_to "Adauga Un Salariu", new_salary_path, id: "salary-button" %>
+        </div>
+        <div class="charts">
+        <div class="chart-1">
+        <h3>Salariul Lunar</h3>
+            <%= column_chart(@monthly_salary,
+                            colors: ["#b00", "#666"],
+                            xtitle: "Luna", ytitle: "Lei MDL") %>
+        </div>
+        <div class="chart-2">
+          <h3>Bonusul Lunar</h3>
+            <%= column_chart(@monthly_bonus,
+                             xtitle: "Luna", ytitle: "Lei MDL")  %>
+        </div>
+      </div>
 
   <% else %>
-      <h1>Please Sign In/Sign Up to see your income</h1>
-      <%= link_to "Sign In", user_session_path %>
-  <% end %>
-</div>
+        <h1>Please Sign In/Sign Up to see your income</h1>
+        <%= link_to "Sign In", user_session_path %>
+  </div>
+<% end %>
