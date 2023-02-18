@@ -4,8 +4,13 @@ class SalariesController < ApplicationController
   def index
     @salaries = Salary.all
 
-    @salaries.each do |s|
-      @user = current_user.id == s.user_id
+    @monthly_salary = {}
+    Salary.where(:user_id => current_user.id).each do |s|
+      @monthly_salary[s.month] = s.salary
+    end
+    @monthly_bonus = {}
+    Salary.where(:user_id => current_user.id).each do |s|
+      @monthly_bonus[s.month] = s.bonus
     end
   end
 

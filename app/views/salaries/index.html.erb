@@ -1,34 +1,25 @@
 
 <div class="container-for-index">
-    <% if user_signed_in? %>
+  <% if user_signed_in? %>
         <%# <% raise %>
-              <h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1>
+      <h1>Welcome <%= current_user.first_name %> <%= current_user.last_name %></h1>
 
-              <h4>Here is your income summary for <%= Date.current.year %></h4>
-              <%= link_to "Add Salary", new_salary_path, id: "salary-button" %>
-            <%#  @salaries.each do |s| %>
-            <%  %>
-              <% if @salaries.select {|s| s.user_id == current_user.id} %>
-                <div class="charts">
-                  <div class="chart-1">
-                  <h3>Monthly Salary</h3>
-                      <%= column_chart Salary.group(:month).sum(:salary),
-                                              colors: ["#b00", "#666"],
-                                              width: "350px",
-                                              height: "500px",
-                                              xtitle: "Months", ytitle: "Lei MDL" %>
-                  </div>
-                  <div class="chart-2">
-                    <h3>Bonus</h3>
-                      <%= column_chart Salary.group(:month).sum(:bonus),
-                                              width: "350px", height: "500px",
-                                              xtitle: "Months", ytitle: "Lei MDL"  %>
-                  </div>
-                </div>
-              <% end %>
-            <%# end %>
-    <% else %>
+      <h4>Here is your income summary for <%= Date.current.year %></h4>
+      <div class="add-sallary-container">
+        <%= link_to "Add Salary", new_salary_path, id: "salary-button" %>
+      </div>
+      <div class="charts">
+      <div class="chart-1">
+      <h3>Monthly Salary</h3>
+          <%= column_chart(@monthly_salary) %>
+      </div>
+      <div class="chart-2">
+        <h3>Bonus</h3>
+          <%= column_chart(@monthly_bonus)  %>
+      </div>
+    </div>
+  <% else %>
       <h1>Please Sign In/Sign Up to see your income</h1>
       <%= link_to "Sign In", user_session_path %>
-    <% end %>
+  <% end %>
 </div>
