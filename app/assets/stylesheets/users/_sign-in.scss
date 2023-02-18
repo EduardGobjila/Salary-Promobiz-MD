@@ -69,6 +69,21 @@
   color: white;
   box-shadow: 1px 1px 6px rgb(94, 118, 46);
 }
+.forgot-btn {
+  background-color: orange;
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+  color: white;
+}
+.forgot-btn:hover {
+  box-shadow: 1px 1px 6px rgb(152, 117, 50);
+  background-color: orange;
+  color: wheat;
+}
+.shared-btn {
+  margin: 18px;
+}
 
 @media screen and (min-width: 800px) {
   .form-inputs {
