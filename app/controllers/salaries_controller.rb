@@ -33,15 +33,19 @@ class SalariesController < ApplicationController
   end
 
   def edit
-
+    @salary = Salary.find(params[:id])
   end
 
   def update
-
+    @salary = Salary.find(params[:id])
+    @salary.update(salary_params)
+    redirect_to root_path
   end
 
   def destroy
-
+    @salary = Salary.find(params[:id])
+    @salary.destroy
+    redirect_to salaries_path, notice: 'Salary was successfully destroyed.', status: :see_other
   end
 
 

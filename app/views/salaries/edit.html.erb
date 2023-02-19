@@ -2,11 +2,11 @@
   <div class="container">
     <h1>Edit Your Salary</h1>
     <%= simple_form_for @salary do |f| %>
-      <%= f.input :salary, collection: Salary::MONTHS %>
+      <%= f.input :salary %>
       <%= f.input :bonus %>
-      <%= f.input :month %>
+      <%= f.input :month, collection: Salary::MONTHS %>
       <%= f.submit "Edit Salary", class: 'btn btn-primary text-white' %>
-      <%= link_to "Back to Main page", invoices_path, class: 'btn btn-danger text-white', style: 'margin: 10px;'  %>
+      <%= link_to "Back to Main page", salaries_path, class: 'btn btn-danger text-white', style: 'margin: 10px;'  %>
     <% end %>
   </div>
 </div>
