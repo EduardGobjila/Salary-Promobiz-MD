@@ -66,7 +66,34 @@
   color: black;
 }
 
+@media screen and (max-width: 990px) {
+  .logo-container {
+    margin: 0 auto;
+  }
+  #logo-promo {
+    width: 150px;
+    object-fit: contain;
+  }
+  .form-container {
+    margin: 20px auto;
+  }
+  .form-control {
+    padding: 9px;
+  }
+  .container {
+    height: 100vh;
+    margin-bottom: 80px;
+  }
 
-@media screen and (min-width: 800px) {
-
+}
+@media screen and (min-width: 991px) {
+  #logo-promo {
+    width: 300px;
+  }
+  .logo-container {
+    margin: 0 auto;
+  }
+  .form-container {
+    margin: 40px auto;
+  }
 }
