@@ -1,0 +1,23 @@
+#user_first_name,
+#user_last_name {
+  width: 150px !important;
+}
+.user_last_name {
+  margin-left: 5px;
+}
+.first-last-name-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.shared-log-in {
+  background-color: yellowgreen;
+  padding: 10px;
+  width: 200px;
+  border-radius: 5px;
+  margin: 20px auto;
+}
+.log-in {
+  text-decoration: none;
+  color: white;
+}

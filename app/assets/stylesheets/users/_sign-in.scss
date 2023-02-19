@@ -33,6 +33,10 @@
   background-color: #90328f;
   border-radius: 5px;
 }
+.form-actions:hover {
+  background-color: #812d7f;
+  border: none;
+}
 .form-actions > input {
   color: white !important;
   width: 90%;

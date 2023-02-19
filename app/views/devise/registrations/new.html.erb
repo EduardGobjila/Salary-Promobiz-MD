@@ -1,34 +1,55 @@
 <div class="container">
-  <h2>Sign up</h2>
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),  data: {turbo: false})  do |f| %>
-    <div class="form-inputs">
-      <%= f.input :first_name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "first_name" } %>
-      <%= f.input :last_name,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "last_name" } %>
-      <%= f.input :email,
-                  required: true,
-                  autofocus: true,
-                  input_html: { autocomplete: "email" }%>
-      <%= f.input :password,
-                  required: true,
-                  hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
-                  input_html: { autocomplete: "new-password" } %>
-      <%= f.input :password_confirmation,
-                  required: true,
-                  input_html: { autocomplete: "new-password" } %>
-    </div>
-
-    <div class="form-actions">
-      <%= f.button :submit, "Sign up", class: 'sign-up' %>
-      <%= f.error_notification %>
-    </div>
-  <% end %>
-  <div class="other-button">
-   <%= render "devise/shared/links" %>
+  <div class="logo-container">
+    <img id='logo-promo' src="https://www.promobiz.md/uploads/1/3/0/0/130050179/promobiz-logo-final.png" alt="">
+    <p>Analizeaza-ti Salariul Aici</p>
   </div>
+  <div class="form-container">
+    <h3>Creaza Cont Nou</h3>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name),  data: {turbo: false})  do |f| %>
+      <div class="form-inputs">
+        <div class="first-last-name-container">
+          <%= f.input :first_name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "first_name" },
+                      label: false,
+                      placeholder: "First Name" %>
+          <%= f.input :last_name,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "last_name" },
+                      label: false,
+                      placeholder: "Last Name" %>
+        </div>
+          <%= f.input :email,
+                      required: true,
+                      autofocus: true,
+                      input_html: { autocomplete: "email" },
+                      label: false,
+                      placeholder: "Email Address" %>
+          <%= f.input :password,
+                      required: true,
+                      hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                      input_html: { autocomplete: "new-password" },
+                      label: false,
+                      placeholder: "Password" %>
+          <%= f.input :password_confirmation,
+                      required: true,
+                      input_html: { autocomplete: "new-password" },
+                      label: false,
+                      placeholder: "Confirm Password" %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Sign up", class: 'sign-up' %>
+          <%= f.error_notification %>
+        </div>
+        <div class="line"></div>
+
+        <div class="rendered-links">
+          <%= render "devise/shared/links" %>
+        </div>
+  </div>
+
+   <% end %>
 </div>
