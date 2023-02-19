@@ -1,9 +1,9 @@
 
 <% if user_signed_in? %>
   <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://cdn2.editmysite.com/images/editor/theme-background/stock/Mountain-Backpacking.jpg);">
-    <div class="container">
+    <div class="container-banner">
       <h1>Bun Venit <br> <strong><%= current_user.first_name  %></strong> <strong><%= current_user.last_name  %></strong></h1>
-      <p>Aici poti analiza salariul si bonusul primit in perioada curents (<%= Date.current.year %>)</p>
+      <p>Aici poti analiza salariul si bonusul primit in perioada curenta (<%= Date.current.year %>)</p>
     </div>
   </div>
   <div class="container-for-index">
