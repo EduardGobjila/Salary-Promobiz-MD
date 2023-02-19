@@ -1,12 +1,19 @@
-<div class = "banner-new">
-  <div class="container">
-    <h1>Add Your Income</h1>
-    <%= simple_form_for @salary do |f| %>
-      <%= f.input :salary %>
-      <%= f.input :bonus %>
-      <%= f.input :month, collection: Salary::MONTHS %>
-      <%= f.submit "Submit Salary", class: 'btn btn-primary text-white' %>
-      <%= link_to "Back to Main page", salaries_path, class: 'btn btn-danger text-white', style: 'margin: 10px;'  %>
-    <% end %>
+<div class = "banner-new" style='background-image: url(https://cdn2.editmysite.com/images/editor/theme-background/stock/Mountain-Backpacking.jpg)'>
+  <div class="container-salary-new">
+    <h1>Adauga-ti Salariul</h1>
+    <div class="salary-new">
+      <%= simple_form_for @salary do |f| %>
+        <%= f.input :salary,
+              label: false,
+              placeholder: "Salariul Primit" %>
+        <%= f.input :bonus,
+                    label: false,
+                    placeholder: "Bonusul Primit" %>
+        <%= f.input :month, collection: Salary::MONTHS %>
+        <%= f.submit "Submit Salary", id: 'submit-salary' %>
+        <div class="line"></div>
+        <%= link_to "Back to Main page", salaries_path, id: 'back-to-main'  %>
+      <% end %>
+    </div>
   </div>
 </div>

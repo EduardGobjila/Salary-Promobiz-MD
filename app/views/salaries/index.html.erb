@@ -4,11 +4,12 @@
     <div class="container-banner">
       <h1>Bun Venit <br> <strong><%= current_user.first_name  %></strong> <strong><%= current_user.last_name  %></strong></h1>
       <p>Aici poti analiza salariul si bonusul primit in perioada curenta (<%= Date.current.year %>)</p>
+      <%= link_to "Adauga Un Salariu", new_salary_path, id: "salary-button" %>
     </div>
   </div>
   <div class="container-for-index">
         <div class="add-sallary-container">
-          <%= link_to "Adauga Un Salariu", new_salary_path, id: "salary-button" %>
+          <%# <%= link_to "Adauga Un Salariu", new_salary_path, id: "salary-button" %>
         </div>
         <div class="charts">
         <div class="chart-1">

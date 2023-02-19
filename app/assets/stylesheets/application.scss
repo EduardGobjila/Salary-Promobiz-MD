@@ -4,7 +4,7 @@
 @import "config/bootstrap_variables";
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome";
-
+@import 'pages/new-salary';
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
@@ -13,5 +13,3 @@
 @import "users/sign-in.scss";
 @import "users/sign-up";
 @import "pages/salary-index.scss";
-
-// ssssssss

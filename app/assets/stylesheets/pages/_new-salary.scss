@@ -1,0 +1,35 @@
+.container-salary-new {
+  text-align: center;
+  padding-top: 50px;
+}
+.container-salary-new h1 {
+  color: #90328f;
+}
+.salary-new {
+  background-color: white;
+  padding: 20px;
+  width: 350px;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px gray
+}
+.banner-new {
+  height: 90vh;
+  background-position: center;
+  background-size: cover;
+}
+#submit-salary {
+  width: 250px;
+  border-radius: 10px;
+  background-color: #90328f;
+  padding: 10px;
+  color: white;
+  border: none;
+}
+#submit-salary:hover {
+  background-color: #7f2e7e;
+}
+#back-to-main {
+  text-decoration: none;
+  color: black;
+}
